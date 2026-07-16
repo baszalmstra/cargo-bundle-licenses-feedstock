@@ -13,22 +13,13 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - ${{ compiler('rust') }}
-    - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - cargo-auditable
-    - pkg-config
-    - make
-    - cmake
-    - libgit2
-    - zlib
-  host:
-    - libgit2
-    - zlib
 
 tests:
   - script:
